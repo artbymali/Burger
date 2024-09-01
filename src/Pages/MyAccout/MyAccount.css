@@ -1,0 +1,165 @@
+.Account {
+    background: #E84242;
+    height: 150vh;
+    width: 100%;
+}
+
+.Account-container {
+    padding-top: 32vh;
+}
+
+.Account-heading {
+    /* padding-top: 32vh; */
+    text-align: center;
+}
+
+.Account-heading h2 {
+    font-family: rakkas;
+    letter-spacing: 1.5px;
+    font-weight: 800;
+    font-size: 4.3vw;
+    color: #F4E6C0;
+    line-height: 1.2;
+}
+
+.Account-heading p {
+    font-family: inter;
+    /* font-weight: 600; */
+    color: #F4E6C0;
+    font-size: 18px;
+}
+
+.Account-box {
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    gap: 6vw;
+    padding-top: 10vh;
+}
+
+.Account-login-heading {
+    padding-bottom: 20px;
+}
+
+.Account-login-heading h3 {
+    font-family: inter;
+    color: #F4E6C0;
+    font-size: 30px;
+}
+
+.Account-login-box {
+    border: 5px solid #F4E6C0;
+    border-radius: 10px;
+    padding: 30px 20px;
+}
+
+.Account-login-email {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-bottom: 20px;
+}
+
+.Account-login-email p{
+    font-family: inter;
+    color: white;
+    font-size: 18px;
+    padding-bottom: 5px;
+}
+
+.Account-login-email input {
+    outline: none;
+    border: 2px solid white;
+    background: none;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    flex: 1;
+}
+
+.loginput {
+    display: flex;
+    position: relative;
+}
+
+.eyeicon {
+    position: absolute;
+    right: 10px;
+    color: white;
+    top: 15px;
+    cursor: pointer;
+}
+
+.Account-login-Password {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-bottom: 20px;
+}
+
+.Account-login-Password p{
+    font-family: inter;
+    color: white;
+    padding-bottom: 5px;
+    font-size: 18px;
+}
+
+.Account-login-Password input {
+    outline: none;
+    border: 2px solid white;
+    background: none;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    flex: 1;
+}
+
+.loginput input {
+    padding-right: 15px;
+}
+
+.Account-login-content .ForgPass {
+    font-family: inter;
+    color: white;
+    text-align: right;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.Account-login-content .ForgPass:hover {
+    text-decoration: underline;
+}
+
+.Account-login-content .RegMesg {
+    font-family: inter;
+    color: white;
+    line-height: 1.4;
+    font-size: 17px;
+    padding-bottom: 20px;
+}
+
+.Account-login-content .RegMesg span {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.Account-login-content button {
+    background: none;
+    color: #F4E6C0;
+    padding: 10px 25px;
+    outline: none;
+    border: 2px solid #F4E6C0;
+    border-radius: 10px;
+    font-size: 18px;
+    font-family: inter;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.Account-login-content button:hover {
+    background: #F4E6C0;
+    color: #E84242;
+}
