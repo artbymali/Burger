@@ -5,9 +5,9 @@ import Bestsellers from './Bestsellers'
 
 
 function Home({TimeDelay, heroTextDelay}) {
-  console.log(TimeDelay, "Hei");
+  // console.log(TimeDelay, "Hei");
   if(TimeDelay === 0 ) return
-  console.log(heroTextDelay, "muhammad ali");
+  // console.log(heroTextDelay, "muhammad ali");
   if(heroTextDelay === 0) return
   const [delay, setDelay] = useState(TimeDelay);
   const [textDelay, setTextDelay] = useState(heroTextDelay);

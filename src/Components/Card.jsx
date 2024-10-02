@@ -3,23 +3,24 @@ import { FaPlus } from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
 
 function Card({
-  card_heading_h2,
-  h2class,
-  pclass,
-  pricetext,
+  title,
+  titleSize,
+  titleHomeSize,
   price,
-  heading_tittle,
+  textClass,
+  category,
+  categorySize,
+  categoryHomeSize,
   card_front_img,
+  card_front_img_width,
+  card_front_image_width,
+  card_front_img_inner,
   card_Bg,
-  card_one,
-  card_two,
-  card_three,
-  card_four,
-  card_five,
-  card_six,
-  card_seven,
-  card_eight,
+  cardClass,
   productId, // Add this prop
+  forProductPage,
+  handleAddToCart,
+  isLoading,
 }) {
   const cardStyle = {
     backgroundImage: `url(${card_Bg})`,
@@ -27,42 +28,99 @@ function Card({
     backgroundPosition: "center",
   };
 
-  const cardClasses = [
-    "card",
-    card_one && card_one,
-    card_two && card_two,
-    card_three && card_three,
-    card_four && card_four,
-    card_five && card_five,
-    card_six && card_six,
-    card_seven && card_seven,
-    card_eight && card_eight,
-  ]
+  const cardClasses = ["card", forProductPage && "ProductCard", cardClass]
     .filter(Boolean)
     .join(" ");
 
   return (
     <>
       <div className={cardClasses} style={cardStyle}>
-        <div className="heading">
-          <p className={pclass}>{heading_tittle}</p>
-          <h2 className={h2class}>{card_heading_h2}</h2>
-        </div>
-        <div className="image">
-          <img src={card_front_img} alt="" />
-        </div>
-        <div className="bottom">
+        {forProductPage ? (
+          <>
+            <div className="image">
+              <img
+                className={`${card_front_img_width} ${card_front_image_width} ${card_front_img_inner}`}
+                src={card_front_img}
+                alt=""
+              />
+            </div>
+            <div className="heading">
+              <p className={`${textClass} ${categorySize} ${categoryHomeSize}`}>
+                {category}
+              </p>
+              <h2 className={`${textClass} ${titleSize} ${titleHomeSize}`}>
+                {title}
+              </h2>
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="heading">
+              <p className={`${textClass} ${categorySize} ${categoryHomeSize}`}>
+                {category}
+              </p>
+              <NavLink to={`/Product/${productId}`}>
+              <h2 onClick={handleAddToCart} className={`${textClass} ${titleSize} ${titleHomeSize}`}>
+                {title}
+              </h2>
+              </NavLink>
+            </div>
+            <div className="image">
+              <img
+                className={`${card_front_img_width} ${card_front_img_inner}`}
+                src={card_front_img}
+                alt=""
+              />
+            </div>
+          </>
+        )}
+
+        {/* <div className="bottom">
           <div className="price">
-            <h3 className={pricetext}>{price}</h3>
+            <h3 className={textClass}>{price}</h3>
             <p>220gr / 600cal</p>
           </div>
           <div className="button">
-            <NavLink to={`/Product/${productId}`}> {/* Update the link */}
+            {forProductPage ? (
+            <button>ADD TO CART</button> // Pure button for product page
+          ) : (
+            <NavLink to={`/Product/${productId}`}>
               <i>
                 <FaPlus className="icon" />
               </i>
             </NavLink>
+          )}
           </div>
+        </div> */}
+
+        <div className="bottom">
+          {forProductPage ? (
+            <div className="productPrice">
+              <p>$8.00</p>
+              <button
+                onClick={handleAddToCart}
+                className={`add-to-cart-btn ${isLoading ? "loading" : ""}`}
+                disabled={isLoading} // Disable button during loading
+              >
+                {isLoading ? "ADDING..." : "ADD TO CART"}
+              </button>
+            </div>
+          ) : (
+            <>
+              <div className="price">
+                <h3 className={textClass}>{price}</h3>
+                <p>220gr / 600cal</p>
+              </div>
+
+              <div className="button">
+                <NavLink to={`/Product/${productId}`}>
+                  <i>
+                    <FaPlus className="icon" />
+                  </i>
+                </NavLink>
+              </div>
+            </>
+          )}
         </div>
       </div>
     </>

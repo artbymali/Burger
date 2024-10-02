@@ -13,6 +13,10 @@ function PageTransition({onComplete}) {
         if (prevLocation.current.pathname !== location.pathname) {
             setIsNavigating(true);
 
+            window.scrollTo(0, 0)
+
+            document.body.style.overflow = 'hidden'
+
             // Run the animation only after the component has mounted
             setTimeout(() => {
                 if (loaderRef.current) {
@@ -34,6 +38,7 @@ function PageTransition({onComplete}) {
                         onComplete: () => {
                             gsap.set(loaderRef.current, { display: 'none' }); // Hide after fade out
                             setIsNavigating(false);
+                            document.body.style.overflow = 'auto';
                             onComplete(true) ;
                         },
                     });

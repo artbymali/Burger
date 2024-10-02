@@ -1,0 +1,491 @@
+.Product-page {
+    width: 100%;
+    height: 100%;
+    background: #F5E7C1;
+}
+
+.Product-page-container {
+    width: 95%;
+    height: 100%;
+    margin: auto;
+    /* background: brown; */
+    display: flex;
+}
+
+.Product-content {
+    width: 100%;
+    height: 100%;
+    padding-top: 30vh;
+}
+
+.Product-selling-content {
+    display: flex;
+    /* align-items: center; */
+    padding-bottom: 2vh;
+}
+
+.Product-selling-content-left {
+    padding-top: 4vh;
+}
+
+.Product-selling-content-left h1 {
+    font-family: inter;
+    color: #E84242;
+    font-size: 3.6vw;
+    padding-bottom: 18px;
+}
+
+.Product-selling-content-left h2 {
+    font-family: inter;
+    font-size: 2.5vw;
+    padding-bottom: 18px;
+}
+
+.Product-selling-content-left h3 {
+    font-family: inter;
+    font-size: 1.5vw;
+    font-weight: 700;
+    padding-bottom: 8px;
+    width: 20px;
+    text-align: center;
+}
+
+.Product-selling-content-left p {
+    font-family: inter;
+    font-weight: 500;
+    padding-right: 80px;
+    line-height: 1.3;
+    padding-bottom: 30px;
+}
+
+.Product-selling-content-right {
+    padding-right: 40px;
+}
+
+.Product-selling-content-right img {
+    width: 35vw;
+}
+
+.Product-selling-button {
+    display: flex;
+    gap: 1rem;
+}
+
+.button-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: fit-content;
+    border: 2px solid black;
+    /* padding: 8px 15px; */
+    width: 120px;
+    border-radius: 50px;
+}
+
+.button-input .minus {
+    font-size: 1.4vw;
+    cursor: pointer;
+}
+
+.button-input .plus {
+    font-size: 1.3vw;
+    cursor: pointer;
+}
+
+.button-input input {
+    border: none;
+    outline: none;
+    background: none;
+    width: 50px;
+    padding: 0 20px;
+    font-size: 1.5vw;
+    /* background: #E84242; */
+}
+
+.Product-selling-button button {
+    background: #E84242;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 15px 25px;
+    font-family: inter;
+    font-weight: 500;
+    font-size: 1.1vw;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.add-to-cart-btn.loading {
+    background-color: #f1c40f; /* Change button color during loading */
+    cursor: not-allowed;
+    position: relative;
+  }
+  
+  .add-to-cart-btn.loading:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.1);
+    animation: loadingAnimation 3s ease-in-out; /* Animation duration of 3 seconds */
+  }
+  
+  @keyframes loadingAnimation {
+    0% {
+      width: 0;
+      opacity: 0.5;
+    }
+    100% {
+      width: 100%;
+      opacity: 0;
+    }
+  }
+
+.Product-selling-dis {
+    width: 60vw;
+}
+
+.Product-selling-dis h2 {
+    font-family: inter;
+    padding-bottom: 15px;
+}
+
+.Product-selling-dis p {
+    font-family: inter;
+    font-weight: 500;
+}
+
+.Product-Tags {
+    display: flex;
+    gap: 1rem;
+    padding-top: 40px;
+    width: 83%;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #dbcda7;
+}
+
+.Product-Tags p {
+    font-family: inter;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.Related-Products-Page {
+    padding-top: 50px;
+}
+
+.Related-Product-Heading {
+    padding-bottom: 30px;
+}
+
+.Related-Product-Heading h2 {
+    font-family: inter;
+    font-size: 2.2vw;
+}
+
+.Related-Products {
+    display: flex;
+    gap: 2rem;
+}
+
+
+.Product-Review-Box {
+    padding-top: 15vh;
+}
+
+.Product-Review-heading h3 {
+    font-family: inter;
+    font-size: 2vw;
+    padding-bottom: 35px;
+}
+
+.Product-Review-Content p {
+    font-family: inter;
+}
+
+.Product-Comment {
+    padding-top: 40px;
+}
+
+.Product-Rating h3 {
+    font-family: inter;
+    font-size: 2vw;
+}
+
+.Product-Star-Rating {
+    padding-top: 25px;
+}
+
+.Product-Star-Rating p {
+    font-family: inter;
+    font-size: 17px;
+    padding-bottom: 8px;
+}
+
+.Product-Star-Rating span {
+    display: flex;
+    gap: 4px;
+}
+
+.Product-Star-Rating span {
+    color: #E84242; /* Default gold star color */
+    cursor: pointer;
+    transition: opacity 0.3s;
+  }
+  
+  .Product-Star-Rating span:hover {
+    color: #E84242; /* Slightly brighter on hover */
+  }
+
+  .Product-Review-Content ul{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+.Product-User-Comment {
+    padding-top: 4.8vh;
+    width: 97%;
+}
+
+.Product-Review-Content ul li{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.Your-Review {
+    padding-bottom: 30px;
+}
+
+.Your-Review p {
+    font-family: inter;
+    padding-bottom: 10px;
+}
+
+.Your-Review input {
+    background: none;
+    outline: none;
+    font-size: 18px;
+    border: 2px solid #dbcda7;
+    width: 100%;
+    border-radius: 20px;
+    padding: 20px;
+    padding-bottom: 30vh;
+    transition: 0.2s ease-in-out;
+}
+
+.Your-Review input:focus {
+    border: 2px solid #E84242;
+}
+
+.Your-Name {
+    padding-bottom: 30px;
+}
+
+.Your-Name p {
+    font-family: inter;
+    padding-bottom: 10px;
+}
+
+.Your-Name input {
+    background: none;
+    outline: none;
+    font-size: 18px;
+    border: 2px solid #dbcda7;
+    width: 100%;
+    border-radius: 15px;
+    padding: 16px;
+    transition: 0.2s ease-in-out;
+}
+
+.Your-Name input:focus {
+    border: 2px solid #E84242;
+}
+
+.Your-Email {
+    padding-bottom: 30px;
+}
+
+.Your-Email p {
+    font-family: inter;
+    padding-bottom: 10px;
+}
+
+.Your-Email input {
+    background: none;
+    outline: none;
+    font-size: 18px;
+    border: 2px solid #dbcda7;
+    width: 100%;
+    border-radius: 15px;
+    padding: 16px;
+    transition: 0.2s ease-in-out;
+}
+
+.Your-Email input:focus {
+    border: 2px solid #E84242;
+}
+
+.Product-User-Comment button {
+    background: #E84242;
+    color: white;
+    font-family: inter;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 12px 30px;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+}
+
+.Review-comment {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.Review-NaEm {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.Review-name h3{
+    font-family: inter;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.Review-email h5{
+    font-family: inter;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.Review-Rating {
+    font-family: inter;
+    display: flex;
+    align-items: center;
+}
+
+
+.Product-bar {
+    width: 30%;
+    height: 100%;
+    margin-top: 35vh;
+}
+
+.Product-bar-cart-heading {
+    position: relative;
+}
+
+.Product-bar-cart-heading h3 {
+    font-family: inter;
+    font-size: 24px;
+    padding-bottom: 25px;
+    position: relative;
+}
+
+.Product-bar-cart-heading h3::after {
+    content: '';
+    position: absolute;
+    top: 35px;
+    width: 70px;
+    background: #E84242;
+    height: 3.2px;
+    display: block;
+}
+
+.cart-item {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: fit-content;
+}
+
+.cart-item-top {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid black;
+    position: relative;
+}
+
+.cart-item-top img {
+    width: 6.4vw;
+    background: #ffffff;
+    padding: 10px 6px;
+    border-radius: 20px;
+    /* position: relative; */
+}
+
+.cart-item-top-text h4 {
+    font-family: inter;
+    font-size: 16px;
+    padding-bottom: 4px;
+}
+
+.cart-item p {
+    font-family: inter;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.cart-item-top span {
+    position: absolute;
+    bottom: 22px;
+    right: 7px;
+}
+
+.cart-item-top span svg {
+    color: #E84242;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.cart-item-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.cart-item-bottom-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cart-item-bottom-text h5 {
+    font-family: inter;
+    font-size: 18px;
+}
+
+.cart-item-bottom-text p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.cart-item-bottom-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.cart-item-bottom-buttons button {
+    padding: 12px 22px;
+    background: #E84242;
+    color: white;
+    font-family: inter;
+    font-size: 1.1vw;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50px;
+}

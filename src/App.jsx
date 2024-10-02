@@ -12,12 +12,12 @@ function App() {
   const [delay, setDelay] = useState(0);
   console.log(delay, "app");
   const PageTransitionTime = 3;
-  const TransitionTime = 5;
+  const TransitionTime = 4;
 
   const [heroTextDelay, setHeroTextDelay] = useState(0);
   console.log(heroTextDelay, "text");
   const PageTransitionHeroText = 3;
-  const TransitionHeroText = 4;
+  const TransitionHeroText = 3.5;
 
 
   useEffect(() => {
